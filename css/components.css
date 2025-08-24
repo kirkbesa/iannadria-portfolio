@@ -1,7 +1,7 @@
 /* Hero Section Components */
 .hero-bg {
     position: absolute;
-    background-image: url('/assets/BG.png');
+    background-image: url('./assets/BG.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -15,7 +15,7 @@
 
 .hero-elements {
     position: absolute;
-    background-image: url('/assets/elements.gif');
+    background-image: url('./assets/elements.gif');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
