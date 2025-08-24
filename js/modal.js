@@ -4,13 +4,12 @@ const modal = document.getElementById('video-modal')
 const closeModalButton = document.getElementById('close-modal')
 const iframe = document.getElementById('modal-video')
 
-// Random YouTube Video (for demonstration)
-const randomVideoLink = 'https://www.youtube.com/embed/dQw4w9WgXcQ' // Example YouTube link
+const videoLink = 'https://www.youtube.com/embed/l3MUKgWs0N0?si=gqN8tBSEJNFjDCW1' // Example YouTube link
 
 // Show the modal with the YouTube video
 tvElement.addEventListener('click', () => {
     modal.style.display = 'flex' // Show the modal
-    iframe.src = randomVideoLink // Set the YouTube video link
+    iframe.src = videoLink // Set the YouTube video link
 })
 
 // Close the modal when the close button is clicked
