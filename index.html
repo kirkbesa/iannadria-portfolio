@@ -13,8 +13,48 @@
         <link rel="stylesheet" href="css/components.css" />
         <link rel="stylesheet" href="css/fonts.css" />
         <link rel="stylesheet" href="css/modal.css" />
+
+        <style>
+            /* Loading Overlay Styles */
+            #loading-overlay {
+                display: flex; /* Use flexbox to center content */
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(
+                    255,
+                    255,
+                    255,
+                    0.9
+                ); /* White background with slight transparency */
+                visibility: visible; /* Initially visible */
+            }
+
+            #loading-overlay img {
+                animation: rotate 1s linear infinite;
+            }
+
+            @keyframes rotate {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
     </head>
     <body class="w-full h-auto font-gobold">
+        <!-- Loading Overlay (Initially Visible) -->
+        <div
+            id="loading-overlay"
+            class="fixed inset-0 bg-white flex justify-center items-center z-50"
+        >
+            <div class="text-center">
+                <img src="/assets/smiley.gif" alt="Loading" class="w-16 h-16 mx-auto mb-4" />
+                <p class="text-lg font-bold">Loading...</p>
+            </div>
+        </div>
+
         <!-- Hero -->
         <section id="hero-container" class="relative w-full h-screen overflow-hidden z-9">
             <!-- BG -->
@@ -224,5 +264,13 @@
         <script src="js/parallax.js"></script>
         <script src="js/animations.js"></script>
         <script src="js/modal.js"></script>
+
+        <!-- JavaScript to hide loading overlay when page is loaded -->
+        <script>
+            window.addEventListener('load', () => {
+                const loadingOverlay = document.getElementById('loading-overlay')
+                loadingOverlay.style.display = 'none' // Hide the loading overlay once everything is loaded
+            })
+        </script>
     </body>
 </html>
