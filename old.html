@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ianna Dria - Multimedia Designer</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+
+        <style>
+            @keyframes smack {
+                0% {
+                    transform: rotate(-40deg); /* 11 o'clock position */
+                }
+                50% {
+                    transform: rotate(25deg); /* 3 o'clock position */
+                }
+                70% {
+                    transform: rotate(10deg); /* Slight bounce back */
+                }
+                100% {
+                    transform: rotate(-40deg); /* Back to 11 o'clock */
+                }
+            }
+
+            .hand-continuous {
+                animation: smack 2s ease-in-out infinite;
+            }
+
+            .hand-smack {
+                animation: smack 1.5s ease-in-out;
+            }
+
+            .hand-smack-loop {
+                animation: smack 1.5s ease-in-out infinite;
+            }
+
+            /* Spark effect animation - Instant with shake */
+            @keyframes sparkEffect {
+                0% {
+                    opacity: 1;
+                    transform: scale(1) translate(0, 0) rotate(0deg);
+                }
+                10% {
+                    opacity: 1;
+                    transform: scale(1.1) translate(-3px, -2px) rotate(-2deg);
+                }
+                20% {
+                    opacity: 1;
+                    transform: scale(1.2) translate(3px, -3px) rotate(2deg);
+                }
+                30% {
+                    opacity: 1;
+                    transform: scale(1.1) translate(-2px, 3px) rotate(-1deg);
+                }
+                40% {
+                    opacity: 1;
+                    transform: scale(1.3) translate(2px, -1px) rotate(1deg);
+                }
+                50% {
+                    opacity: 1;
+                    transform: scale(1.2) translate(-1px, -2px) rotate(-2deg);
+                }
+                60% {
+                    opacity: 1;
+                    transform: scale(1.1) translate(2px, 1px) rotate(1deg);
+                }
+                70% {
+                    opacity: 1;
+                    transform: scale(1) translate(-1px, 2px) rotate(0deg);
+                }
+                80% {
+                    opacity: 0.8;
+                    transform: scale(0.9) translate(1px, -1px) rotate(0deg);
+                }
+                90% {
+                    opacity: 0.4;
+                    transform: scale(0.8) translate(0, 0) rotate(0deg);
+                }
+                100% {
+                    opacity: 0;
+                    transform: scale(0.7) translate(0, 0) rotate(0deg);
+                }
+            }
+
+            .spark-effect {
+                animation: sparkEffect 0.6s ease-out;
+            }
+
+            .spark-hidden {
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            @keyframes tvShake {
+                0%,
+                100% {
+                    transform: translate(-50%, -50%);
+                }
+                10% {
+                    transform: translate(-52%, -48%);
+                }
+                20% {
+                    transform: translate(-48%, -52%);
+                }
+                30% {
+                    transform: translate(-52%, -50%);
+                }
+                40% {
+                    transform: translate(-50%, -48%);
+                }
+                50% {
+                    transform: translate(-48%, -50%);
+                }
+                60% {
+                    transform: translate(-50%, -52%);
+                }
+                70% {
+                    transform: translate(-52%, -50%);
+                }
+                80% {
+                    transform: translate(-50%, -48%);
+                }
+                90% {
+                    transform: translate(-48%, -50%);
+                }
+            }
+
+            .tv-shake {
+                animation: tvShake 0.5s ease-in-out;
+            }
+
+            .hand-continuous {
+                animation: smack 2s ease-in-out infinite;
+            }
+
+            /* Responsive breakpoints for TV and Hand container */
+            @media (max-width: 1200px) {
+                .tv-hand-container {
+                    transform: scale(0.8);
+                }
+            }
+
+            @media (max-width: 768px) {
+                .tv-hand-container {
+                    transform: scale(0.6);
+                }
+            }
+
+            @media (max-width: 480px) {
+                .tv-hand-container {
+                    transform: scale(0.4);
+                }
+            }
+
+            /* TV responsive sizing */
+            .w-screen-tv {
+                width: 60vw; /* 60% of viewport width */
+                min-width: 300px; /* Minimum size for mobile */
+                max-width: 800px; /* Maximum size for large screens */
+            }
+
+            /* Hand responsive sizing */
+            .w-screen-hand {
+                width: 36vw; /* 36% of viewport width (60% of TV size) */
+                min-width: 180px; /* Minimum size for mobile */
+                max-width: 480px; /* Maximum size for large screens */
+            }
+
+            /* Responsive breakpoint adjustments */
+            @media (max-width: 768px) {
+                .w-screen-tv {
+                    width: 80vw;
+                    max-width: 500px;
+                }
+
+                .w-screen-hand {
+                    width: 48vw;
+                    max-width: 300px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .w-screen-tv {
+                    width: 90vw;
+                    max-width: 400px;
+                }
+
+                .w-screen-hand {
+                    width: 54vw;
+                    max-width: 240px;
+                }
+            }
+
+            /* Spark responsive sizing - MUCH BIGGER */
+            .w-screen-spark {
+                width: 35vw; /* Increased from 20vw */
+                min-width: 200px; /* Increased from 120px */
+                max-width: 500px; /* Increased from 300px */
+            }
+
+            @media (max-width: 768px) {
+                .w-screen-spark {
+                    width: 40vw; /* Increased from 25vw */
+                    max-width: 350px; /* Increased from 200px */
+                }
+            }
+
+            @media (max-width: 480px) {
+                .w-screen-spark {
+                    width: 45vw; /* Increased from 30vw */
+                    max-width: 250px; /* Increased from 150px */
+                }
+            }
+        </style>
+    </head>
+    <body class="w-full h-auto">
+        <!-- Hero -->
+        <section id="hero-container" class="relative w-full h-screen overflow-hidden">
+            <!-- BG -->
+            <div
+                id="hero-bg"
+                class="absolute bg-no-repeat bg-cover bg-center"
+                style="
+                    background-image: url('/assets/BG.png');
+                    filter: grayscale(100%);
+                    z-index: 1;
+                    width: 130%;
+                    height: 130%;
+                    top: -15%;
+                    left: -15%;
+                "
+            ></div>
+
+            <!-- TV and Hand Container for responsive scaling and parallax -->
+            <div
+                id="tv-hand-container"
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10"
+            >
+                <!-- Spark effect - positioned at impact point BEHIND TV and hand -->
+                <img
+                    src="/assets/Spark.png"
+                    id="hero-spark"
+                    class="absolute max-w-none spark-hidden w-screen-spark h-auto"
+                    style="top: -10%; left: -10%; transform-origin: center; z-index: 1"
+                />
+
+                <!-- TV - Responsive sizing -->
+                <img
+                    src="/assets/TV.png"
+                    id="hero-tv"
+                    class="block max-w-none w-screen-tv h-auto relative"
+                    style="z-index: 2"
+                />
+
+                <!-- Hand positioned relative to TV -->
+                <img
+                    src="/assets/Hand.png"
+                    id="hero-hand"
+                    class="absolute hand-continuous max-w-none cursor-pointer w-screen-hand h-auto"
+                    style="
+                        top: -35%;
+                        left: -50%;
+                        transform-origin: bottom center;
+                        transform: rotate(-60deg);
+                        z-index: 3;
+                    "
+                />
+            </div>
+
+            <!-- Earth - Bottom Center -->
+            <img
+                src="/assets/Earth.png"
+                id="hero-earth"
+                class="absolute max-w-none h-auto left-1/2 transform -translate-x-1/2 grayscale bottom-0 lg:-bottom-10 lg:-bottom-64"
+                style="width: 120vw; filter: grayscale(100%); z-index: 2"
+            />
+        </section>
+
+        <script>
+            function createParallax(id, multiplier, isEarthElement = false, isContainer = false) {
+                const element = document.getElementById(id)
+                const container = document.getElementById('hero-container')
+
+                window.addEventListener('mousemove', (e) => {
+                    const rect = container.getBoundingClientRect()
+                    const centerX = rect.width / 2
+                    const centerY = rect.height / 2
+
+                    // Calculate offset from center
+                    const mouseX = e.clientX - rect.left
+                    const mouseY = e.clientY - rect.top
+                    const offsetX = (mouseX - centerX) / centerX // -1 to 1
+                    const offsetY = (mouseY - centerY) / centerY // -1 to 1
+
+                    const moveX = offsetX * multiplier
+                    const moveY = offsetY * multiplier
+
+                    if (isEarthElement) {
+                        // Earth only moves horizontally, stays bottom-centered
+                        element.style.transform = `translateX(calc(-50% + ${moveX}px))`
+                    } else if (isContainer) {
+                        // TV and Hand container moves together
+                        element.style.transform = `translate(calc(-50% + ${moveX}px), calc(-50% + ${moveY}px))`
+                    } else {
+                        // Background
+                        element.style.transform = `translate(${moveX}px, ${moveY}px)`
+                    }
+                })
+            }
+
+            // Initialize parallax
+            createParallax('tv-hand-container', 150, false, true) // TV and Hand move together
+            createParallax('hero-bg', 25)
+            createParallax('hero-earth', 100, true)
+
+            // Updated smack animation with spark effect
+            const hand = document.getElementById('hero-hand')
+            const tv = document.getElementById('hero-tv')
+            const spark = document.getElementById('hero-spark')
+
+            // Update the hand animation timing to sync with spark
+            function triggerSpark() {
+                // Show spark effect at impact moment
+                spark.classList.remove('spark-hidden')
+                spark.classList.add('spark-effect')
+
+                // Hide spark after animation
+                setTimeout(() => {
+                    spark.classList.add('spark-hidden')
+                    spark.classList.remove('spark-effect')
+                }, 600)
+            }
+
+            // Trigger spark earlier in the animation cycle
+            // Hand animation is 2s, impact happens around 40% (0.8s), so trigger at 0.8s intervals
+            setTimeout(() => {
+                setInterval(triggerSpark, 2000)
+            }, 800) // Start after 0.8s delay to sync with first impact
+        </script>
+
+        <!-- About Section -->
+        <section id="about" class="w-full h-screen bg-blue-500"></section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class=""></section>
+
+        <!-- Contact Section -->
+        <section id="contact" class=""></section>
+
+        <!-- Footer -->
+        <footer class=""></footer>
+    </body>
+</html>

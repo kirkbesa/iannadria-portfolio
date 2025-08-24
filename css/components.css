@@ -1,0 +1,102 @@
+/* Hero Section Components */
+.hero-bg {
+    position: absolute;
+    background-image: url('/assets/BG.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    z-index: 1;
+    width: 130%;
+    height: 130%;
+    top: -15%;
+    left: -15%;
+}
+
+.hero-elements {
+    position: absolute;
+    background-image: url('/assets/elements.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+}
+
+.tv-hand-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.hero-spark {
+    position: absolute;
+    max-width: none;
+    width: inherit; /* Will inherit from responsive class */
+    height: auto;
+    top: 0%;
+    left: -0%;
+    transform-origin: center;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hero-tv {
+    display: block;
+    max-width: none;
+    width: inherit; /* Will inherit from responsive class */
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-hand {
+    position: absolute;
+    max-width: none;
+    cursor: pointer;
+    width: inherit; /* Will inherit from responsive class */
+    height: auto;
+    top: -35%;
+    left: -50%;
+    transform-origin: bottom center;
+    transform: rotate(-60deg);
+    z-index: 3;
+}
+
+.hero-earth {
+    position: absolute;
+    max-width: none;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: grayscale(100%);
+    z-index: 2;
+    bottom: 0;
+    width: 120vw;
+}
+
+/* Large screens adjustment for earth */
+@media (min-width: 1024px) {
+    .hero-earth {
+        bottom: -2.5rem; /* lg:-bottom-10 equivalent */
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-earth {
+        bottom: -16rem; /* lg:-bottom-64 equivalent */
+    }
+}
+
+.custom-scrollbar {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}

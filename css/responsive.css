@@ -1,0 +1,102 @@
+/* TV and Hand Container Responsive Scaling */
+@media (max-width: 1200px) {
+    .tv-hand-container {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 768px) {
+    .tv-hand-container {
+        transform: scale(0.6);
+    }
+}
+
+@media (max-width: 480px) {
+    .tv-hand-container {
+        transform: scale(0.4);
+    }
+}
+
+/* TV Responsive Sizing */
+.w-screen-tv {
+    width: 60vw; /* 60% of viewport width */
+    min-width: 300px; /* Minimum size for mobile */
+    max-width: 800px; /* Maximum size for large screens */
+}
+
+/* Hand Responsive Sizing */
+.w-screen-hand {
+    width: 36vw; /* 36% of viewport width (60% of TV size) */
+    min-width: 180px; /* Minimum size for mobile */
+    max-width: 480px; /* Maximum size for large screens */
+}
+
+/* Spark Responsive Sizing */
+.w-screen-spark {
+    width: 50vw; /* Increased from 20vw */
+    min-width: 280px; /* Increased from 120px */
+    max-width: 700px; /* Increased from 300px */
+}
+
+/* Mobile Breakpoints */
+@media (max-width: 768px) {
+    .w-screen-tv {
+        width: 80vw;
+        max-width: 500px;
+    }
+
+    .w-screen-hand {
+        width: 48vw;
+        max-width: 300px;
+    }
+
+    .w-screen-spark {
+        width: 55vw; /* Increased from 25vw */
+        max-width: 500px; /* Increased from 200px */
+    }
+}
+
+@media (max-width: 480px) {
+    .w-screen-tv {
+        width: 90vw;
+        max-width: 400px;
+    }
+
+    .w-screen-hand {
+        width: 54vw;
+        max-width: 240px;
+    }
+
+    .w-screen-spark {
+        width: 60vw; /* Increased from 30vw */
+        max-width: 350px; /* Increased from 150px */
+    }
+}
+
+.about-image {
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+    .about-image {
+        height: 500px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-image {
+        height: 700px;
+    }
+}
+
+@media (max-width: 400px) {
+    .about-image {
+        height: 800px;
+    }
+}

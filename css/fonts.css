@@ -1,0 +1,73 @@
+/* Font Import */
+@font-face {
+    font-family: 'GoBold';
+    src: url('/assets/fonts/gobold/GoBold-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GoBold';
+    src: url('/assets/fonts/gobold/GoBold-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GoBold';
+    src: url('/assets/fonts/gobold/GoBold-BoldItalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* TailwindCSS Custom Utility Classes */
+.font-gobold {
+    font-family: 'GoBold', sans-serif;
+}
+
+.font-gobold-bold {
+    font-family: 'GoBold', sans-serif;
+    font-weight: bold;
+}
+
+.font-gobold-italic {
+    font-family: 'GoBold', sans-serif;
+    font-style: italic;
+}
+
+.font-gobold-bolditalic {
+    font-family: 'GoBold', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Add custom text sizes */
+.text-lg-gobold {
+    font-family: 'GoBold', sans-serif;
+    font-size: 1.125rem; /* 18px */
+}
+
+.text-xl-gobold {
+    font-family: 'GoBold', sans-serif;
+    font-size: 1.25rem; /* 20px */
+}
+
+.text-2xl-gobold {
+    font-family: 'GoBold', sans-serif;
+    font-size: 1.5rem; /* 24px */
+}
+
+.text-3xl-gobold {
+    font-family: 'GoBold', sans-serif;
+    font-size: 1.875rem; /* 30px */
+}
+
+.text-4xl-gobold {
+    font-family: 'GoBold', sans-serif;
+    font-size: 2.25rem; /* 36px */
+}
+
+.text-5xl-gobold {
+    font-family: 'GoBold', sans-serif;
+    font-size: 3rem; /* 48px */
+}

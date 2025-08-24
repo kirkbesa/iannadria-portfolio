@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ianna Dria - Multimedia Designer</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/animations.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/fonts.css" />
+        <link rel="stylesheet" href="css/modal.css" />
+    </head>
+    <body class="w-full h-auto font-gobold">
+        <!-- Hero -->
+        <section id="hero-container" class="relative w-full h-screen overflow-hidden z-9">
+            <!-- BG -->
+            <div id="hero-bg" class="hero-bg"></div>
+
+            <!-- Moving Elements -->
+            <div id="hero-elements" class="hero-elements"></div>
+
+            <!-- TV and Hand Container for responsive scaling and parallax -->
+            <div id="tv-hand-container" class="tv-hand-container">
+                <!-- Spark effect - positioned at impact point BEHIND TV and hand -->
+                <img
+                    src="/assets/Spark.png"
+                    id="hero-spark"
+                    class="absolute max-w-none spark-hidden w-screen-spark h-auto"
+                    style="top: -20%; left: -20%; transform-origin: center; z-index: 5"
+                />
+
+                <!-- TV - Responsive sizing -->
+                <img
+                    src="/assets/tv.gif"
+                    id="hero-tv"
+                    class="block max-w-none w-screen-tv h-auto relative cursor-pointer"
+                    style="z-index: 6"
+                />
+
+                <!-- Hand positioned relative to TV -->
+                <img
+                    src="/assets/Hand.png"
+                    id="hero-hand"
+                    class="absolute hand-continuous max-w-none cursor-pointer w-screen-hand h-auto"
+                    style="
+                        top: -35%;
+                        left: -50%;
+                        transform-origin: bottom center;
+                        transform: rotate(-60deg);
+                        z-index: 7;
+                    "
+                />
+            </div>
+
+            <!-- Earth - Bottom Center -->
+            <img src="/assets/Earth.png" id="hero-earth" class="hero-earth" />
+        </section>
+
+        <!-- Modal (Initially Hidden) -->
+        <div
+            id="video-modal"
+            class="fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-50 hidden"
+        >
+            <div class="relative bg-white p-6 md:p-8 w-11/12 md:w-2/3">
+                <!-- Close Button -->
+                <button id="close-modal" class="absolute top-2 right-2 text-xl font-bold">X</button>
+
+                <!-- Embedded YouTube Video -->
+                <div class="relative pb-9-16">
+                    <iframe
+                        id="modal-video"
+                        class="absolute inset-0 w-full h-full"
+                        src=""
+                        frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="relative -mt-12 -mb-12 z-10">
+            <img src="assets/about-BG.png" class="about-image" />
+
+            <div class="relative z-10 px-8 md:px-16 py-8 md:py-24 max-w-screen-xl mx-auto">
+                <h2 class="text-3xl-gobold md:text-4xl-gobold font-gobold-bolditalic text-blue-400">
+                    Howdy, I'm Ianna Dria!
+                </h2>
+                <div class="px-8 py-4 flex flex-col gap-4">
+                    <p class="text-white text-lg-gobold md:text-xl-gobold font-gobold-bolditalic">
+                        I've been making pixels move, stories pop, and ideas click. My toolkit spans
+                        video editing, motion graphics, and design -- and yes, somewhere in there I
+                        crafted 200+ indie game assets
+                        <span class="opacity-70">(don't ask how many late nights that took)</span>.
+                    </p>
+                    <p class="text-lg-gobold text-white md:text-xl-gobold font-gobold-bolditalic">
+                        I've collaborated with teams across borders, creating work that connects
+                        with global audiences -- from countless projects for social, digital, and
+                        brand campaigns.
+                    </p>
+                </div>
+                <p
+                    class="text-xl-gobold md:text-2xl-gobold font-gobold-bolditalic text-red-400 text-right"
+                >
+                    Let's make something worth double-tapping.
+                </p>
+            </div>
+        </div>
+
+        <!-- Showcase -->
+        <section
+            id="showcase"
+            class="w-full h-auto flex flex-col items-center gap-8 md:py-16 py-40"
+            style="
+                background-image: url('assets/showcase-BG.png');
+                background-repeat: no-repeat;
+                background-position: center;
+            "
+        >
+            <div id="showcase-header" class="w-full h-auto flex flex-col items-center">
+                <img src="assets/Showcase.png" class="h-auto md:w-96 w-60" />
+            </div>
+
+            <!-- Video Edits -->
+            <div class="w-full h-auto flex flex-col gap-4 items-center">
+                <div class="flex gap-4 items-center">
+                    <h2 class="text-3xl-gobold font-gobold-bolditalic">VIDEO EDITS</h2>
+                    <img src="assets/triangle.png" />
+                </div>
+                <div class="flex flex-row gap-4 w-full overflow-x-scroll custom-scrollbar">
+                    <div class="w-auto flex flex-row gap-4">
+                        <div class="w-96 h-52 bg-black"></div>
+                        <div class="w-96 h-52 bg-black"></div>
+                        <div class="w-96 h-52 bg-black"></div>
+                        <div class="w-96 h-52 bg-black"></div>
+                        <div class="w-96 h-52 bg-black"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Motion Graphics -->
+            <div class="w-full h-auto flex flex-col gap-4 items-center">
+                <div class="flex gap-4 items-center">
+                    <h2 class="text-3xl-gobold font-gobold-bolditalic">MOTION GRAPHICS</h2>
+                    <img src="assets/triangle.png" />
+                </div>
+                <div class="flex flex-row gap-4 w-full overflow-x-scroll custom-scrollbar">
+                    <div class="w-auto flex flex-row gap-4">
+                        <div class="w-96 h-52 bg-black"></div>
+                        <div class="w-96 h-52 bg-black"></div>
+                        <div class="w-96 h-52 bg-black"></div>
+                        <div class="w-96 h-52 bg-black"></div>
+                        <div class="w-96 h-52 bg-black"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SOCIAL SHORT FORMS -->
+            <div class="w-full h-auto flex flex-col gap-4 items-center">
+                <div class="flex gap-4 items-center">
+                    <h2 class="text-3xl-gobold font-gobold-bolditalic">SOCIAL SHORT FORMS</h2>
+                    <img src="assets/triangle.png" />
+                </div>
+                <div class="flex flex-row gap-4 w-full overflow-x-scroll custom-scrollbar">
+                    <div class="w-auto flex flex-row gap-4">
+                        <div class="w-96 h-52 bg-black"></div>
+                        <div class="w-96 h-52 bg-black"></div>
+                        <div class="w-96 h-52 bg-black"></div>
+                        <div class="w-96 h-52 bg-black"></div>
+                        <div class="w-96 h-52 bg-black"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Graphic Designs -->
+            <div class="w-full h-auto flex flex-col gap-4 items-center">
+                <div class="flex gap-4 items-center">
+                    <h2 class="text-3xl-gobold font-gobold-bolditalic">GRAPHIC DESIGNS</h2>
+                    <img src="assets/triangle.png" />
+                </div>
+                <div class="flex flex-row gap-4 w-full overflow-x-scroll custom-scrollbar">
+                    <div class="w-auto flex flex-row gap-4">
+                        <div class="w-96 h-52 bg-black"></div>
+                        <div class="w-96 h-52 bg-black"></div>
+                        <div class="w-96 h-52 bg-black"></div>
+                        <div class="w-96 h-52 bg-black"></div>
+                        <div class="w-96 h-52 bg-black"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer
+            class="h-96 w-full gap-8 flex flex-col lg:flex-row items-center justify-center"
+            style="background-image: url(assets/connect-BG.png)"
+        >
+            <img src="/assets/Lets-connect.png" class="w-60 lg:w-96 h-auto" />
+            <div class="flex flex-row gap-4 items-center justify-center">
+                <img src="/assets/smiley.gif" class="w-10 lg:w-16 h-auto" />
+                <a
+                    href="mailto:iannadria@gmail.com"
+                    target="_blank"
+                    class="text-lg-gobold lg:text-xl-gobold text-white"
+                    >EMAIL: iannadria@gmail.com</a
+                >
+            </div>
+            <div class="flex flex-row gap-4 items-center justify-center">
+                <img src="/assets/smiley.gif" class="w-10 lg:w-16 h-auto" />
+                <a
+                    href="https://www.instagram.com/iannadria/"
+                    target="_blank"
+                    class="text-lg-gobold lg:text-xl-gobold text-white"
+                    >INSTAGRAM: @iannadria</a
+                >
+            </div>
+        </footer>
+
+        <script src="js/parallax.js"></script>
+        <script src="js/animations.js"></script>
+        <script src="js/modal.js"></script>
+    </body>
+</html>
