@@ -17,3 +17,12 @@ closeModalButton.addEventListener('click', () => {
     modal.style.display = 'none' // Hide the modal
     iframe.src = '' // Stop the video by resetting the iframe source
 })
+
+// Close the modal if the user clicks outside the modal content
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        // Check if the click is on the background (not the modal content)
+        modal.style.display = 'none' // Hide the modal
+        iframe.src = '' // Stop the video
+    }
+})
