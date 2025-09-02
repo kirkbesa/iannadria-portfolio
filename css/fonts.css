@@ -1,21 +1,21 @@
 /* Font Import */
 @font-face {
     font-family: 'GoBold';
-    src: url('./assets/fonts/gobold/GoBold-Regular.otf') format('opentype');
+    src: url('/assets/fonts/gobold/GoBold-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'GoBold';
-    src: url('./assets/fonts/gobold/GoBold-Bold.otf') format('opentype');
+    src: url('/assets/fonts/gobold/GoBold-Bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'GoBold';
-    src: url('./assets/fonts/gobold/GoBold-BoldItalic.otf') format('opentype');
+    src: url('/assets/fonts/gobold/GoBold-BoldItalic.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
 }
